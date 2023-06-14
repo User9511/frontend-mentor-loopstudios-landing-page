@@ -17,11 +17,11 @@
   --font-body: 15px;
 }
 
+/* Desktop View */
 body {
   font-family: "Alata", sans-serif;
-  /* font-family: "Josefin Sans", sans-serif; */
   font-size: var(--font-body);
-  background-color: gray;
+  color: var(--White);
   margin: 0 auto;
 }
 
@@ -29,10 +29,14 @@ img {
   width: 100%;
 }
 
+a {
+  color: var(--White);
+}
+
 header {
   background-image: url(./images/desktop/image-hero.jpg);
   background-size: cover;
-  height: 650px;
+  height: 47.5rem;
   position: relative;
 }
 
@@ -43,7 +47,7 @@ header::before {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.4);
 }
 
 nav {
@@ -52,11 +56,101 @@ nav {
   justify-content: space-between;
   color: var(--White);
   font-size: 1.1rem;
-  margin: 0 auto;
+  margin: 0 1.5rem;
   max-width: 80rem;
+  position: relative;
+  top: 4rem;
 }
 
 .nav-list {
   display: flex;
   gap: 2rem;
+}
+
+.nav-list li {
+  position: relative;
+}
+
+.nav-list li a::before {
+  position: absolute;
+  content: "";
+  width: 50%;
+  height: 2px;
+  top: 2rem;
+  left: 25%;
+  transition: 0.3s ease;
+  opacity: 0;
+  background: var(--White);
+}
+
+.nav-list li a:hover::before {
+  opacity: 1;
+}
+
+.hamburger {
+  display: none;
+}
+
+.hamburger.active .bar:nth-child(2) {
+  opacity: 0;
+}
+.hamburger.active .bar:nth-child(1) {
+  transform: translateY(8px) rotate(45deg);
+}
+.hamburger.active .bar:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg);
+}
+
+.bar {
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 5px auto;
+  background-color: var(--White);
+  transition: 0.3s ease-in-out;
+}
+
+h1 {
+  position: relative;
+  border: 2px solid var(--White);
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 4.5rem;
+  font-weight: 300;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  line-height: 1;
+  max-width: 45rem;
+  left: 12.3rem;
+  top: 30%;
+  padding: 2.5rem;
+}
+
+/* Mobile View */
+@media screen and (max-width: 48rem) {
+  body {
+    background-color: yellow;
+  }
+
+  header {
+    background-image: url(./images/mobile/image-hero.jpg);
+    background-size: cover;
+  }
+
+  .nav-list {
+    display: none;
+  }
+
+  .hamburger {
+    display: block;
+    cursor: pointer;
+  }
+
+  h1 {
+    position: relative;
+    font-size: 2.5rem;
+    left: 0rem;
+    top: 25%;
+    margin: 1.5rem;
+    padding: 2rem 1.5rem;
+  }
 }
