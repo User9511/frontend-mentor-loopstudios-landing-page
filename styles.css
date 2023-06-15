@@ -143,6 +143,12 @@ h1 {
     display: none;
   }
 
+  #nav-list li a::before {
+    width: 20%;
+    left: 5%;
+    top: 2.5rem;
+  }
+
   .hamburger {
     display: block;
     cursor: pointer;
