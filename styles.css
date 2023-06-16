@@ -13,13 +13,25 @@
   --Black: hsl(0, 0%, 0%);
   --Dark-Gray: hsl(0, 0%, 55%);
   --Very-Dark-Gray: hsl(0, 0%, 41%);
-  --font-body: 15px;
+
+  --font-hero-title: clamp(0.94rem, calc(1.13rem + 4.06vw), 5rem);
+  --font-nav-dt: 1rem;
+  --font-nav-mob: 2rem;
+
+  --step--1: clamp(0.58rem, calc(-0.1rem + 3.42vw), 4rem);
+  --step-1: clamp(1.52rem, calc(0.57rem + 4.73vw), 6.25rem);
+  --step-2: clamp(2.45rem, calc(1.38rem + 5.36vw), 7.81rem);
+  --step-3: clamp(3.97rem, calc(2.81rem + 5.79vw), 9.77rem);
+  --step-4: clamp(6.43rem, calc(5.27rem + 5.78vw), 12.21rem);
+  --step-5: clamp(10.4rem, calc(9.42rem + 4.86vw), 15.26rem);
+  --step-6: clamp(16.82rem, calc(16.37rem + 2.25vw), 19.07rem);
+  --step-7: clamp(23.84rem, calc(27.89rem + -3.37vw), 27.22rem);
+  --step-8: clamp(29.8rem, calc(46.88rem + -14.23vw), 44.04rem);
 }
 
 /* Desktop View */
 body {
   font-family: "Alata", sans-serif;
-  font-size: var(--font-body);
   color: var(--White);
   margin: 0 auto;
 }
@@ -53,8 +65,8 @@ nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  font-size: var(--font-nav-dt);
   color: var(--White);
-  font-size: 1.1rem;
   margin: 0 auto;
   padding: 1.5rem;
   max-width: 80rem;
@@ -64,7 +76,7 @@ nav {
 
 #nav-list {
   display: flex;
-  gap: 2rem;
+  gap: 3rem;
 }
 
 #nav-list li {
@@ -93,7 +105,7 @@ nav {
 
 .hero-title-text-container {
   max-width: 80rem;
-  margin: 15rem auto;
+  margin: 12rem auto;
   padding: 0 1.5rem;
 }
 
@@ -101,7 +113,7 @@ h1 {
   position: relative;
   border: 2px solid var(--White);
   font-family: "Josefin Sans", sans-serif;
-  font-size: 4.5rem;
+  font-size: var(--font-hero-title);
   font-weight: 300;
   text-transform: uppercase;
   letter-spacing: 5px;
@@ -110,12 +122,23 @@ h1 {
   padding: 2.5rem;
 }
 
+.feature-image-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin: 2rem;
+}
+
+h2 {
+  color: var(--Black);
+  text-transform: uppercase;
+  letter-spacing: 1.4px;
+}
+.feature-image-wrapper p {
+  color: var(--Very-Dark-Gray);
+}
+
 /* Mobile View */
 @media screen and (max-width: 48rem) {
-  body {
-    background-color: yellow;
-  }
-
   header {
     background-image: url(./images/mobile/image-hero.jpg);
     background-size: cover;
@@ -123,6 +146,10 @@ h1 {
 
   .logo {
     z-index: 20;
+  }
+
+  nav {
+    font-size: var(--font-nav-mob);
   }
 
   #nav-wrapper {
@@ -196,7 +223,6 @@ h1 {
     display: flex;
     position: relative;
     text-transform: uppercase;
-    font-size: 2rem;
     font-family: "Josefin Sans", sans-serif;
     gap: 2rem;
     top: 30%;
@@ -208,7 +234,6 @@ h1 {
 
   h1 {
     position: relative;
-    font-size: 2.5rem;
     margin: 1.5rem;
     padding: 2rem 1.5rem;
   }
