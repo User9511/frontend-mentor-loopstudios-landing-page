@@ -199,6 +199,10 @@ h2 {
   max-width: 85rem;
 }
 
+.gallery-card {
+  position: relative;
+}
+
 picture {
   display: flex;
   flex-direction: column;
@@ -208,7 +212,7 @@ picture {
   transition: 0.3s ease-in-out;
 }
 
-picture:hover {
+.card-content:hover h3 {
   color: var(--Black);
 }
 
