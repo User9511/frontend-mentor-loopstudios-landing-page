@@ -17,6 +17,8 @@
   --font-hero-title: clamp(0.94rem, calc(1.13rem + 4.06vw), 5rem);
   --font-nav-dt: 1rem;
   --font-nav-mob: 2rem;
+  --card-title-dt: 2.5rem;
+  --card-title-mob: 2rem;
 
   --step--1: clamp(0.58rem, calc(-0.1rem + 3.42vw), 4rem);
   --step-1: clamp(1.52rem, calc(0.57rem + 4.73vw), 6.25rem);
@@ -160,6 +162,90 @@ h2 {
   color: var(--Very-Dark-Gray);
 }
 
+/* Image Gallery  */
+.gallery-title {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  max-width: 85rem;
+  margin: 2rem auto;
+}
+
+.gallery-title h2 {
+  margin: 4rem 0;
+}
+
+.btn {
+  position: absolute;
+  top: 4rem;
+  right: 0;
+  text-transform: uppercase;
+  color: var(--Black);
+  outline: 1px solid var(--Black);
+  padding: 0.5rem 2.5rem;
+  letter-spacing: 1.4px;
+}
+
+.btn:hover {
+  background-color: var(--Black);
+  color: var(--White);
+  transition: 0.3s ease-in-out;
+}
+
+.gallery-wrapper {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(256px, 1fr));
+  gap: 2rem;
+  max-width: 85rem;
+}
+
+picture {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: var(--White);
+  position: relative;
+  transition: 0.3s ease-in-out;
+}
+
+picture:hover {
+  color: var(--Black);
+}
+
+picture::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+picture:hover::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  color: var(--Black);
+  background-color: white;
+  opacity: 0.8;
+}
+
+.card--title {
+  position: absolute;
+  font-family: "Josefin Sans", sans-serif;
+  font-size: var(--card-title-dt);
+  bottom: 2rem;
+  left: 2.5rem;
+  line-height: 1;
+  letter-spacing: 3px;
+  z-index: 100;
+  text-transform: uppercase;
+  font-weight: lighter;
+}
+
 /* Mobile View */
 @media screen and (max-width: 48rem) {
   header {
@@ -261,6 +347,7 @@ h2 {
     padding: 2rem 1.5rem;
   }
 
+  /* Feature Image - Interactive VR */
   .feature-image-wrapper {
     display: grid;
     grid-template-columns: 1fr;
@@ -284,5 +371,36 @@ h2 {
 
   h2 {
     margin: 2rem 0;
+  }
+
+  /* Image Gallery  */
+
+  .gallery-title h2 {
+    text-align: center;
+  }
+
+  .btn {
+    position: absolute;
+    bottom: -4rem;
+    top: initial;
+    text-transform: uppercase;
+    color: var(--Black);
+    outline: 1px solid var(--Black);
+    padding: 0.5rem 2.5rem;
+    letter-spacing: 1.4px;
+    text-align: center;
+    left: 50%;
+    transform: translateX(-50%);
+    margin: 2rem 0;
+  }
+
+  .gallery-wrapper {
+    margin: 2rem 1.5rem;
+  }
+
+  .card--title {
+    font-size: var(--card-title-mob);
+    bottom: 1rem;
+    left: 1rem;
   }
 }
