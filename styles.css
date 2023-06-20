@@ -212,7 +212,7 @@ picture {
   transition: 0.3s ease-in-out;
 }
 
-.card-content:hover h3 {
+.card-content:hover a {
   color: var(--Black);
 }
 
@@ -225,7 +225,8 @@ picture::before {
   height: 100%;
   background-color: rgba(0, 0, 0, 0.2);
 }
-picture:hover::after {
+
+.gallery-card:hover picture::after {
   content: "";
   position: absolute;
   top: 0;
