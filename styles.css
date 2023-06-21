@@ -18,7 +18,7 @@
   --font-nav-dt: 1rem;
   --font-nav-mob: 2rem;
   --font-h2-dt: 2.75rem;
-  --font-h2-mob: 2.3rem;
+  --font-h2-mob: 2.1rem;
   --card-title-dt: 2.5rem;
   --card-title-mob: 2rem;
 }
@@ -375,9 +375,6 @@ footer {
     line-height: 2;
     padding: 0rem;
     text-align: center;
-  }
-  .feature-card-text p {
-    padding: 0 1.8rem 0 1.8rem;
   }
 
   /* Image Gallery  */
