@@ -135,6 +135,7 @@ h2 {
   grid-template-columns: 2fr 1fr 2fr;
   max-width: 85rem;
   margin: 10rem auto;
+  padding: 0 1.5rem;
 }
 
 .feature-image-wrapper img {
@@ -166,6 +167,7 @@ h2 {
   position: relative;
   max-width: 85rem;
   margin: 2rem auto;
+  padding: 0 1.5rem;
 }
 
 .btn {
@@ -190,7 +192,7 @@ h2 {
   grid-template-columns: repeat(auto-fit, minmax(256px, 1fr));
   gap: 2rem;
   max-width: 85rem;
-  margin: 6rem 0 2rem 0;
+  margin: 6rem 0 9rem 0;
 }
 
 .gallery-card {
@@ -257,6 +259,7 @@ footer {
   align-items: center;
   max-width: 85rem;
   margin: 0 auto;
+  padding: 0 1.5rem;
 }
 
 .footer-container-a {
@@ -404,7 +407,7 @@ footer {
     display: grid;
     grid-template-columns: 1fr;
     max-width: 85rem;
-    margin: 7rem 1.5rem;
+    margin: 7rem auto;
   }
 
   .feature-image-wrapper img {
