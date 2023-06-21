@@ -14,21 +14,13 @@
   --Dark-Gray: hsl(0, 0%, 55%);
   --Very-Dark-Gray: hsl(0, 0%, 41%);
 
-  --font-hero-title: clamp(0.94rem, calc(1.13rem + 4.06vw), 5rem);
+  --font-hero-title: clamp(2.5rem, calc(1.13rem + 4.06vw), 5rem);
   --font-nav-dt: 1rem;
   --font-nav-mob: 2rem;
+  --font-h2-dt: 2.75rem;
+  --font-h2-mob: 2.3rem;
   --card-title-dt: 2.5rem;
   --card-title-mob: 2rem;
-
-  --step--1: clamp(0.58rem, calc(-0.1rem + 3.42vw), 4rem);
-  --step-1: clamp(1.52rem, calc(0.57rem + 4.73vw), 6.25rem);
-  --step-2: clamp(2.45rem, calc(1.38rem + 5.36vw), 7.81rem);
-  --step-3: clamp(3.97rem, calc(2.81rem + 5.79vw), 9.77rem);
-  --step-4: clamp(6.43rem, calc(5.27rem + 5.78vw), 12.21rem);
-  --step-5: clamp(10.4rem, calc(9.42rem + 4.86vw), 15.26rem);
-  --step-6: clamp(16.82rem, calc(16.37rem + 2.25vw), 19.07rem);
-  --step-7: clamp(23.84rem, calc(27.89rem + -3.37vw), 27.22rem);
-  --step-8: clamp(29.8rem, calc(46.88rem + -14.23vw), 44.04rem);
 }
 
 /* Desktop View */
@@ -37,6 +29,10 @@ body {
   color: var(--White);
   margin: 0 auto;
   line-height: 1.5;
+}
+
+body.mobile-menu-open {
+  overflow: hidden;
 }
 
 img {
@@ -127,7 +123,7 @@ h1 {
 
 h2 {
   font-family: "Josefin Sans", sans-serif;
-  font-size: 2.75rem;
+  font-size: var(--font-h2-dt);
   color: var(--Black);
   text-transform: uppercase;
   letter-spacing: 1.4px;
@@ -138,7 +134,7 @@ h2 {
   display: grid;
   grid-template-columns: 2fr 1fr 2fr;
   max-width: 85rem;
-  margin: 9rem auto;
+  margin: 10rem auto;
 }
 
 .feature-image-wrapper img {
@@ -150,9 +146,13 @@ h2 {
   right: 8rem;
   align-self: flex-end;
   background-color: white;
-  line-height: 1.5;
-  padding-top: 6rem;
+  line-height: 2;
+  padding-top: 3rem;
   padding-left: 6rem;
+}
+
+.feature-card-text h2 {
+  margin: 4rem 0 2rem 0;
 }
 
 .feature-image-wrapper p {
@@ -190,7 +190,7 @@ h2 {
   grid-template-columns: repeat(auto-fit, minmax(256px, 1fr));
   gap: 2rem;
   max-width: 85rem;
-  margin: 5rem 0 2rem 0;
+  margin: 6rem 0 2rem 0;
 }
 
 .gallery-card {
@@ -243,6 +243,11 @@ picture::before {
   z-index: 100;
   text-transform: uppercase;
   font-weight: lighter;
+}
+
+footer {
+  background-color: var(--Black);
+  padding: 2rem;
 }
 
 /* Mobile View */
@@ -347,11 +352,15 @@ picture::before {
   }
 
   /* Feature Image - Interactive VR */
+
+  h2 {
+    font-size: var(--font-h2-mob);
+  }
   .feature-image-wrapper {
     display: grid;
     grid-template-columns: 1fr;
     max-width: 85rem;
-    margin: 5rem 1.5rem;
+    margin: 7rem 1.5rem;
   }
 
   .feature-image-wrapper img {
@@ -363,15 +372,25 @@ picture::before {
     right: 0rem;
     align-self: flex-end;
     background-color: white;
-    line-height: 1.5;
+    line-height: 2;
     padding: 0rem;
     text-align: center;
   }
+  .feature-card-text p {
+    padding: 0 1.8rem 0 1.8rem;
+  }
 
   /* Image Gallery  */
+  .gallery-title {
+    padding: 1.5rem;
+  }
 
   .gallery-title h2 {
     text-align: center;
+  }
+
+  .gallery-wrapper {
+    margin: 3.5rem 0 2rem 0;
   }
 
   .btn {
@@ -380,7 +399,7 @@ picture::before {
     text-transform: uppercase;
     color: var(--Black);
     outline: 1px solid var(--Black);
-    padding: 1rem;
+    padding: 0.75rem;
     letter-spacing: 1.4px;
     text-align: center;
     width: 50%;
