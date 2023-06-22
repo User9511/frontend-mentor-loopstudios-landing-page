@@ -295,6 +295,7 @@ footer {
 
 .copyright {
   color: var(--Very-Dark-Gray);
+  font-size: 0.8rem;
 }
 
 /* Mobile View */
@@ -460,6 +461,7 @@ footer {
   footer {
     background-color: var(--Black);
     padding: 2rem;
+    text-align: center;
   }
 
   .footer-wrapper {
@@ -469,9 +471,6 @@ footer {
     align-items: center;
     max-width: 85rem;
     margin: 2rem auto;
-  }
-
-  .footer-container-a {
   }
 
   .footer-nav-list {
