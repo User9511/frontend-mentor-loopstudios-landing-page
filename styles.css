@@ -262,15 +262,9 @@ footer {
   padding: 0 1.5rem;
 }
 
-.footer-container-a {
-}
-
 .footer-nav-list {
   display: flex;
   gap: 2.5rem;
-}
-
-.footer-container-b {
 }
 
 .social-media-icons {
@@ -460,7 +454,7 @@ footer {
   /* Footer */
   footer {
     background-color: var(--Black);
-    padding: 2rem;
+    padding: 3rem;
     text-align: center;
   }
 
